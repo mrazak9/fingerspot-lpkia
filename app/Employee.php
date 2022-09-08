@@ -9,7 +9,7 @@ class Employee extends Model
     protected $table = 'employes';
 
     protected $fillable = [
-        'pin', 'name', 'privilege', 'finger', 'face', 'password', 'rfid', 'vein'
+        'pin', 'name', 'status'
     ];
 
     protected $casts = [
