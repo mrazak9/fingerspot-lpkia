@@ -120,8 +120,8 @@
                 }
             });
             $('#refresh').click(function() {
-                $('#from_date').val();
-                $('#to_date').val();
+                $('#from_date').val('');
+                $('#to_date').val('');
                 $('#scanlog').DataTable().destroy();
                 load_data();
             });
