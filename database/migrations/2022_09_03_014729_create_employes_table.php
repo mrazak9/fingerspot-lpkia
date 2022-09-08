@@ -17,6 +17,7 @@ class CreateEmployesTable extends Migration
             $table->id();
             $table->integer('pin');
             $table->string('name');
+            $table->string('status');
             $table->timestamps();
         });
     }
