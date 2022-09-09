@@ -132,6 +132,8 @@
                 $('#scanlog').DataTable({
                     processing: true,
                     serverSide: true,
+                    scrollY: '50vh',
+                    scrollCollapse: true,
                     ajax: {
                         url: "{{ route('scanlog.index') }}",
                         type: 'GET',
@@ -163,7 +165,14 @@
                     ],
                     paging: false,
                     dom: 'Bfrtip',
-                    buttons: ['copy', 'excel']
+                    buttons: [{
+                            extend: 'excelHtml5',
+                            title: "Download Scanlog -" + now
+                        },
+                        {
+                            extend: 'copy',
+                        }
+                    ]
                 });
             }
 
